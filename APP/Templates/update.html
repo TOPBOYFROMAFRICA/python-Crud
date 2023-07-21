@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container1">
+    <h1>
+        Add Student
+    </h1>
+    <form action="{% url 'updateStudent' st.id %}" method="post">
+        {% csrf_token %}
+        <label for="">First Name</label><br><br>
+        <input type="text" name="first_name" value="{{st.first_name}}"><br><br>
+        <label for="">Last Name</label><br><br>
+        <input type="text" name="last_name"value="{{st.last_name}}"><br><br>
+        <label for="">Class Name</label><br><br>
+        <input type="text" name="class_name" value="{{st.class_name}}"><br>
+        <button type="submit" id="new">Update</button>
+    </form>
+</div>
+
+</body>
+</html>
